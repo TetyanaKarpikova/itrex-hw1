@@ -1,0 +1,207 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Poppins';
+  background-color: #F9FAFF;
+}
+
+.main-wrapper {
+  background-color: #F9FAFF;
+}
+
+.image-background {
+  width: 100%;
+  z-index: -1;
+}
+
+.image-background__top {
+  width: 100%;
+  margin-bottom: -50%;
+}
+
+.form-signup {
+  background-color: #F9FAFF;
+  border-radius: 24px 24px 0 0;
+  width: 100%;
+  z-index: 10;
+  -webkit-transform: translateY(-5%);
+          transform: translateY(-5%);
+}
+
+.form-signup_move {
+  -webkit-transform: translateY(-75%);
+          transform: translateY(-75%);
+}
+
+.name-page {
+  margin: 5% auto;
+  width: 80%;
+  color: #202225;
+  padding-top: 10%;
+  font-weight: 600;
+}
+
+.wrapper-input {
+  width: 80%;
+  margin: 5% auto;
+  border: 1px solid #DCE0EC;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 8px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.16);
+          box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.16);
+}
+
+.wrapper-input__data {
+  background: #FFFFFF;
+  border-radius: 8px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 2em;
+  padding-left: 50px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 10px;
+  position: relative;
+}
+
+.wrapper-input__data_firstName {
+  background-image: url("./images/icon-fname.svg");
+}
+
+.wrapper-input__data_lastName {
+  background-image: url("./images/icon-fname.svg");
+}
+
+.wrapper-input__data_email {
+  background-image: url("./images/icon-email.svg");
+}
+
+.wrapper-input__data_passw {
+  background-image: url("./images/icon-lock.svg");
+}
+
+.wrapper-input__data_passw-confirm {
+  background-image: url("./images/icon-pass-confirm.svg");
+}
+
+.wrapper-input__data:-webkit-autofill, .wrapper-input__data:-webkit-autofill:hover, .wrapper-input__data:-webkit-autofill:focus, .wrapper-input__data:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+.wrapper-input__show-pass {
+  background-repeat: no-repeat;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  background-color: white;
+}
+
+.wrapper-input__show-confirm {
+  background-repeat: no-repeat;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border: none;
+  background-color: white;
+}
+
+.wrapper-input__icon-eye {
+  opacity: 0.5;
+  width: 18px;
+  height: 18px;
+}
+
+.wrapper-input__icon-password {
+  opacity: 0.7;
+  color: grey;
+  font-size: 20px;
+}
+
+.wrapper-input__icon-confirm {
+  opacity: 0.7;
+  color: grey;
+  font-size: 20px;
+}
+
+.wrapper-send-form {
+  width: 80%;
+  margin: 5% auto;
+}
+
+.wrapper-send-form__button {
+  background: #7297FF;
+  border-radius: 8px;
+  color: white;
+  padding: 12px 16px;
+  border: 0;
+  font-weight: 600;
+}
+
+.wrapper-link {
+  color: #A1ABC9;
+  font-size: 0.8em;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.wrapper-link span {
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .main-wrapper {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 20% 1fr;
+        grid-template-columns: 20% 1fr;
+    -ms-grid-rows: 1fr 10%;
+        grid-template-rows: 1fr 10%;
+  }
+  .image-background {
+    height: 100%;
+    z-index: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/3;
+  }
+  .image-background__top {
+    margin-left: 0;
+    background-image: url("./images/tablet-bg.jpg");
+    height: 100%;
+  }
+  .form-signup {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  .wrapper-open-signin {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+  }
+}

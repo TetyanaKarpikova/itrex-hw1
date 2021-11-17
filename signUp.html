@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styleSign.css">
+    <title>SignUp</title>
+</head>
+
+<body>
+    <main class="main-wrapper">
+        <div class="image-background">
+            <img class="image-background__top" src="images/bg.jpg" alt="background images">
+        </div>
+
+        <form class="form-signup " id="form" submit="sendForm()">
+            <h2 class="name-page">Sign Up</h2>
+            <div class="wrapper-input">
+                <input class="wrapper-input__data wrapper-input__data_firstName" type="text"
+                    name="firstName" placeholder="First Name">
+            </div>
+            <div class="wrapper-input">
+                <input class="wrapper-input__data wrapper-input__data_lastName" type="text"
+                    name="lastName" placeholder="Last Name">
+            </div>
+            <div class="wrapper-input">
+                <input class="wrapper-input__data wrapper-input__data_email" type="email"
+                    name="email" placeholder="Email">
+            </div>
+            <div class="wrapper-input">
+                <input class="wrapper-input__data wrapper-input__data_passw" type="password"
+                    name="password" placeholder="Password">
+                <button class="wrapper-input__show-pass wrapper-input__show-pass_open" type="button">
+                    <img class="wrapper-input__icon-eye" src="./images/icon-eye.svg">                   
+                </button>
+            </div>
+            <div class="wrapper-input">
+                <input class="wrapper-input__data wrapper-input__data_passw-confirm"
+                    type="password" name="confirmPassword" placeholder="Confirm Password">
+                <button class="wrapper-input__show-confirm wrapper-input__show-confirm_open" type="button">
+                    <img class="wrapper-input__icon-eye" src="./images/icon-eye.svg">                 
+                </button>
+
+            </div>
+            <div class="wrapper-send-form">
+                <button class="wrapper-send-form__button" type="submit">Sign Up ></button>
+            </div>
+        </form>
+        <div class="wrapper-link">
+            <span> Already have an account? </span>
+            <a href="./signIn.html">Sign in</a>
+        </div>
+    </main>
+        
+</body>
+
+</html>
