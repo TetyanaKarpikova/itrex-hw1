@@ -44,6 +44,7 @@ body {
 }
 
 .wrapper-input {
+  position: relative;
   width: 80%;
   margin: 5% auto;
   border: 1px solid #DCE0EC;
@@ -57,6 +58,7 @@ body {
   background: #FFFFFF;
   -webkit-box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.16);
           box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.16);
+  position: relative;
 }
 
 .wrapper-input__data {
@@ -68,30 +70,38 @@ body {
   width: 100%;
   height: 2em;
   padding-left: 50px;
+}
+
+.wrapper-input::before {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  background-image: url("./images/icon-fname.svg");
   background-repeat: no-repeat;
-  background-position-y: center;
-  background-position-x: 10px;
-  position: relative;
 }
 
-.wrapper-input__data_firstName {
-  background-image: url("./images/icon-fname.svg");
-}
-
-.wrapper-input__data_lastName {
-  background-image: url("./images/icon-fname.svg");
-}
-
-.wrapper-input__data_email {
+.wrapper-input:nth-child(4)::before {
   background-image: url("./images/icon-email.svg");
 }
 
-.wrapper-input__data_passw {
+.wrapper-input:nth-child(5)::before {
   background-image: url("./images/icon-lock.svg");
 }
 
-.wrapper-input__data_passw-confirm {
+.wrapper-input:nth-child(6)::before {
   background-image: url("./images/icon-pass-confirm.svg");
+}
+
+.wrapper-input_signin:nth-child(2)::before {
+  background-image: url("./images/icon-email.svg");
+}
+
+.wrapper-input_signin:nth-child(3)::before {
+  background-image: url("./images/icon-lock.svg");
 }
 
 .wrapper-input__data:-webkit-autofill, .wrapper-input__data:-webkit-autofill:hover, .wrapper-input__data:-webkit-autofill:focus, .wrapper-input__data:-webkit-autofill:active {
@@ -107,7 +117,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   border: none;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .wrapper-input__show-confirm {
@@ -119,7 +129,7 @@ body {
   height: -moz-fit-content;
   height: fit-content;
   border: none;
-  background-color: white;
+  background-color: #FFFFFF;
 }
 
 .wrapper-input__icon-eye {
@@ -148,7 +158,7 @@ body {
 .wrapper-send-form__button {
   background: #7297FF;
   border-radius: 8px;
-  color: white;
+  color: #FFFFFF;
   padding: 12px 16px;
   border: 0;
   font-weight: 600;
