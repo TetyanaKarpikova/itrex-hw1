@@ -26,7 +26,7 @@ class VIew {
         this.confirmPassword = this.getElement(".wrapper-input__data_confirm");
         this.showPassword = this.getElement(".wrapper-input__show-pass");
         this.showConfirmPassword = this.getElement(".wrapper-input__show-confirm");
-        console.log(this.showConfirmPassword);
+        
         this.localListenerPassword();
         this.localListenerConfirm();
     }
