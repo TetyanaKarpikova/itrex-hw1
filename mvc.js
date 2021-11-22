@@ -26,7 +26,7 @@ class VIew {
         this.confirmPassword = this.getElement(".wrapper-input__data_confirm");
         this.showPassword = this.getElement(".wrapper-input__show-pass");
         this.showConfirmPassword = this.getElement(".wrapper-input__show-confirm");
-        
+
         this.localListenerPassword();
         this.localListenerConfirm();
     }
@@ -54,21 +54,23 @@ class VIew {
     }
 
     localListenerConfirm() {
-        this.showConfirmPassword.addEventListener('click', (event) => {
-            event.preventDefault();
+        if (this.confirmPassword) {
+            this.showConfirmPassword.addEventListener('click', (event) => {
+                event.preventDefault();
 
-            this.confirmPassword.getAttribute('type') === 'password'
-                ? this.confirmPassword.setAttribute('type', 'text')
-                : this.confirmPassword.setAttribute('type', 'password');
+                this.confirmPassword.getAttribute('type') === 'password'
+                    ? this.confirmPassword.setAttribute('type', 'text')
+                    : this.confirmPassword.setAttribute('type', 'password');
 
-            if (event.target.classList.contains("wrapper-input__show-confirm_icon-eye")) {
-                event.target.classList.remove("wrapper-input__show-confirm_icon-eye")
-                event.target.classList.add("wrapper-input__show-confirm")
-            } else {
-                event.target.classList.remove("wrapper-input__show-confirm");
-                event.target.classList.add("wrapper-input__show-confirm");
-            }
-        })
+                if (event.target.classList.contains("wrapper-input__show-confirm_icon-eye")) {
+                    event.target.classList.remove("wrapper-input__show-confirm_icon-eye")
+                    event.target.classList.add("wrapper-input__show-confirm_icon-close")
+                } else {
+                    event.target.classList.remove("wrapper-input__show-confirm_icon-close");
+                    event.target.classList.add("wrapper-input__show-confirm_icon-eye");
+                }
+            })
+        }
     }
 
     clearInput(form) {
@@ -100,7 +102,7 @@ class VIew {
                             break outer;
                         }
                     }
-                    if (name && password) {                        
+                    if (name && password) {
                         window.open('dashboard.html', '_self');
                     }
                 }
