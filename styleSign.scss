@@ -27,7 +27,7 @@ body {
     width: 100%;
     z-index: 10;
     transform: translateY(-5%);
-    &_move {
+    &_login {
         transform: translateY(-75%);
     }
 }
@@ -102,27 +102,43 @@ body {
         }
     
     &__show-pass {
-        background-repeat: no-repeat;
-        width: fit-content;
-        height: fit-content;
+        background-repeat: no-repeat;       
         border: none;
-        background-color:$white-color;      
-    }
-
-    &__show-confirm {
-        background-repeat: no-repeat;
-        width: fit-content;
-        height: fit-content;
-        border: none;
-        background-color: $white-color;       
-    }
-
-    &__icon-eye {
-        opacity: 0.5;
-        width: 18px;
-        height: 18px;
+        background-color:$white-color;            
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;        
+        background-position-y: center;
+        &_icon-eye {
+            background-image: url(./images/icon-eye.svg);  
+        }
+       
+        &_icon-close {
+            background-image: url(./images/icon-eye-blocked.svg);  
+        }
     }
     
+    &__show-confirm {
+        background-repeat: no-repeat;       
+        border: none;
+        background-color:$white-color;            
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;        
+        background-position-y: center;  
+        &_icon-eye {
+            background-image: url(./images/icon-eye.svg);  
+        }
+       
+        &_icon-close {
+            background-image: url(./images/icon-eye-blocked.svg);  
+        }
+    }
+    
+    &__icon-close {
+        background-image: url(./images/icon-eye-blocked.svg);  
+    }
+
     &__icon-password {
         opacity: 0.7;
         color: grey;

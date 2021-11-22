@@ -30,7 +30,7 @@ body {
           transform: translateY(-5%);
 }
 
-.form-signup_move {
+.form-signup_login {
   -webkit-transform: translateY(-75%);
           transform: translateY(-75%);
 }
@@ -110,32 +110,42 @@ body {
 
 .wrapper-input__show-pass {
   background-repeat: no-repeat;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   border: none;
   background-color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  background-position-y: center;
+}
+
+.wrapper-input__show-pass_icon-eye {
+  background-image: url(./images/icon-eye.svg);
+}
+
+.wrapper-input__show-pass_icon-close {
+  background-image: url(./images/icon-eye-blocked.svg);
 }
 
 .wrapper-input__show-confirm {
   background-repeat: no-repeat;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
   border: none;
   background-color: #FFFFFF;
+  width: 32px;
+  height: 32px;
+  opacity: 0.5;
+  background-position-y: center;
 }
 
-.wrapper-input__icon-eye {
-  opacity: 0.5;
-  width: 18px;
-  height: 18px;
+.wrapper-input__show-confirm_icon-eye {
+  background-image: url(./images/icon-eye.svg);
+}
+
+.wrapper-input__show-confirm_icon-close {
+  background-image: url(./images/icon-eye-blocked.svg);
+}
+
+.wrapper-input__icon-close {
+  background-image: url(./images/icon-eye-blocked.svg);
 }
 
 .wrapper-input__icon-password {
