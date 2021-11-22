@@ -7,10 +7,12 @@ class Model {
         localStorage.setItem("signUp", JSON.stringify(user));
     }
 
-    addData(email, password) {
+    addData(email, password, firstName, lastName) {
         const newUser = {
             email,
-            password
+            password,
+            firstName,
+            lastName
         }
         this.data.push(newUser);
         this.setData(this.data);
@@ -26,6 +28,8 @@ class VIew {
         this.confirmPassword = this.getElement(".wrapper-input__data_confirm");
         this.showPassword = this.getElement(".wrapper-input__show-pass");
         this.showConfirmPassword = this.getElement(".wrapper-input__show-confirm");
+        this.firstName = this.getElement(".wrapper-input__data_firstName");
+        this.lastName = this.getElement(".wrapper-input__data_lastName");
 
         this.localListenerPassword();
         this.localListenerConfirm();
@@ -86,8 +90,8 @@ class VIew {
             event.preventDefault();
 
             if (this.form.classList.contains('form-signup__register')) {
-                if (this.email.value && this.password.value) {
-                    handler(this.email.value, this.password.value);
+                if (this.email.value && this.password.value && this.firstName.value) {
+                    handler(this.email.value, this.password.value, this.firstName.value, this.lastName.value);
                     window.open('signIn.html', '_self');
                 }
             }
@@ -122,8 +126,8 @@ class Controller {
         this.handlerDisplayUser(this.model.data);
     }
 
-    handlerAddNewData = (email, password) => {
-        this.model.addData(email, password);
+    handlerAddNewData = (email, password, firstName, lastName) => {
+        this.model.addData(email, password, firstName, lastName);
     }
 
     handlerDisplayUser = (user) => {
