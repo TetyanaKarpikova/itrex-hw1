@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styleSign.css">
+    <link rel="stylesheet" href="styleSign.css">
     <title>SignUp</title>
 </head>
 
@@ -18,34 +18,32 @@
             <img class="image-background__top" src="images/bg.jpg" alt="background images">
         </div>
 
-        <form class="form-signup " id="form" submit="sendForm()">
+        <form class="form-signup form-signup__register " id="form" submit="sendForm()">
             <h2 class="name-page">Sign Up</h2>
             <div class="wrapper-input">
-                <input class="wrapper-input__data" type="text"
-                    name="firstName" placeholder="First Name">
+                <input class="wrapper-input__data wrapper-input__data_firstName" type="text" name="firstName" placeholder="First Name">
             </div>
             <div class="wrapper-input">
-                <input class="wrapper-input__data" type="text"
-                    name="lastName" placeholder="Last Name">
+                <input class="wrapper-input__data wrapper-input__data_lastName" type="text" name="lastName" placeholder="Last Name">
             </div>
             <div class="wrapper-input">
-                <input class="wrapper-input__data" type="email"
-                    name="email" placeholder="Email">
+                <input class="wrapper-input__data wrapper-input__data_email" type="email" name="email"
+                    placeholder="Email">
             </div>
             <div class="wrapper-input">
-                <input class="wrapper-input__data" type="password"
-                    name="password" placeholder="Password">                
-                <button class="wrapper-input__show-pass wrapper-input__show-pass_open" type="button">
-                    <img class="wrapper-input__icon-eye" src="./images/icon-eye.svg">                   
+                <input class="wrapper-input__data wrapper-input__data_password" type="password" name="password"
+                    placeholder="Password">
+                <button class="wrapper-input__show-pass wrapper-input__show-pass_open wrapper-input__show-pass_icon-eye"
+                    type="button">
                 </button>
             </div>
-            <div class="wrapper-input">
-                <input class="wrapper-input__data"
-                    type="password" name="confirmPassword" placeholder="Confirm Password">
-                <button class="wrapper-input__show-confirm wrapper-input__show-confirm_open" type="button">
-                    <img class="wrapper-input__icon-eye" src="./images/icon-eye.svg">                 
+            <div class="wrapper-input">               
+                <input class="wrapper-input__data wrapper-input__data_confirm" type="password" name="confirmPassword"
+                    placeholder="Confirm Password">
+                <button
+                    class="wrapper-input__show-confirm wrapper-input__show-confirm_open wrapper-input__show-confirm_icon-eye"
+                    type="button">
                 </button>
-
             </div>
             <div class="wrapper-send-form">
                 <button class="wrapper-send-form__button" type="submit">Sign Up ></button>
@@ -56,7 +54,7 @@
             <a href="./signIn.html">Sign in</a>
         </div>
     </main>
-        
+    <script src="mvc.js"></script>
 </body>
 
 </html>
