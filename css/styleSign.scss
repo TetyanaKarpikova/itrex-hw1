@@ -1,4 +1,4 @@
-@import './colorsVariable.scss';
+@import '../css/colorsVariable.scss';
 
 body {
     margin: 0;
@@ -27,7 +27,7 @@ body {
     width: 100%;
     z-index: 10;
     transform: translateY(-5%);
-    &_move {
+    &_login {
         transform: translateY(-75%);
     }
 }
@@ -70,27 +70,27 @@ body {
         content: '';
         width: 24px;
         height: 24px;
-        background-image: url('./images/icon-fname.svg');
+        background-image: url('../images/icon-fname.svg');
         background-repeat: no-repeat;
     }
 
     &:nth-child(4)::before {
-        background-image: url('./images/icon-email.svg'); 
+        background-image: url('../images/icon-email.svg'); 
     }
 
     &:nth-child(5)::before {
-        background-image: url('./images/icon-lock.svg'); 
+        background-image: url('../images/icon-lock.svg'); 
     }
     &:nth-child(6)::before {
-        background-image: url('./images/icon-pass-confirm.svg'); 
+        background-image: url('../images/icon-pass-confirm.svg'); 
     }
 
     &_signin:nth-child(2)::before {
-        background-image: url('./images/icon-email.svg'); 
+        background-image: url('../images/icon-email.svg'); 
     }
 
     &_signin:nth-child(3)::before {
-        background-image: url('./images/icon-lock.svg'); 
+        background-image: url('../images/icon-lock.svg'); 
     }
     
     &__data:-webkit-autofill,
@@ -102,19 +102,37 @@ body {
         }
     
     &__show-pass {
-        background-repeat: no-repeat;
-        width: fit-content;
-        height: fit-content;
+        background-repeat: no-repeat;       
         border: none;
-        background-color:$white-color;      
+        background-color:$white-color;            
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;        
+        background-position-y: center;  
+        &_icon-eye {
+            background-image: url(../images/icon-eye.svg);  
+        }
+       
+        &_icon-close {
+            background-image: url(../images/icon-eye-blocked.svg);  
+        }   
     }
 
     &__show-confirm {
-        background-repeat: no-repeat;
-        width: fit-content;
-        height: fit-content;
+        background-repeat: no-repeat;       
         border: none;
-        background-color: $white-color;       
+        background-color:$white-color;            
+        width: 32px;
+        height: 32px;
+        opacity: 0.5;        
+        background-position-y: center;  
+        &_icon-eye {
+            background-image: url(../images/icon-eye.svg);  
+        }
+       
+        &_icon-close {
+            background-image: url(../images/icon-eye-blocked.svg);  
+        }
     }
 
     &__icon-eye {
@@ -171,7 +189,7 @@ body {
         grid-row: 1/3;
         &__top {
             margin-left: 0;
-            background-image: url("./images/tablet-bg.jpg");
+            background-image: url("../images/tablet-bg.jpg");
             height: 100%;
         }
     }    
