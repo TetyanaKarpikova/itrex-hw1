@@ -9,16 +9,18 @@ body {
 
 .main-wrapper {
   background-color: #F9FAFF;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 20% 1fr;
+      grid-template-rows: 20% 1fr;
 }
 
 .image-background {
   width: 100%;
-  z-index: -1;
-}
-
-.image-background__top {
-  width: 100%;
-  margin-bottom: -50%;
+  height: 150px;
+  background-image: url(../images/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .form-signup {
@@ -28,11 +30,6 @@ body {
   z-index: 10;
   -webkit-transform: translateY(-5%);
           transform: translateY(-5%);
-}
-
-.form-signup_login {
-  -webkit-transform: translateY(-75%);
-          transform: translateY(-75%);
 }
 
 .name-page {
@@ -142,24 +139,6 @@ body {
 
 .wrapper-input__show-confirm_icon-close {
   background-image: url(../images/icon-eye-blocked.svg);
-}
-
-.wrapper-input__icon-eye {
-  opacity: 0.5;
-  width: 18px;
-  height: 18px;
-}
-
-.wrapper-input__icon-password {
-  opacity: 0.7;
-  color: grey;
-  font-size: 20px;
-}
-
-.wrapper-input__icon-confirm {
-  opacity: 0.7;
-  color: grey;
-  font-size: 20px;
 }
 
 .wrapper-send-form {

@@ -3,7 +3,7 @@ const SignUp = {
         return `
         <main class="main-wrapper">
         <div class="image-background">
-            <img class="image-background__top" src="images/bg.jpg" alt="background images">
+           
         </div>
 
         <form class="form-signup form-signup__register " id="form" submit="sendForm()">

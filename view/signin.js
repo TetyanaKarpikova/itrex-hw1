@@ -3,7 +3,7 @@ const SignIn = {
         return `
         <main class="main-wrapper">
         <div class="image-background">
-            <img class="image-background" src="./images/bg.jpg" alt="background images">
+            
         </div>
 
         <form class="form-signup form-signup_login" id="form" submit="sendForm()">
