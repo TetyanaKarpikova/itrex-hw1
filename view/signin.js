@@ -21,7 +21,7 @@ const SignIn = {
                 </button>
             </div>
             <div class="wrapper-send-form">
-                <button class="wrapper-send-form__button" type="submit" data-name="/dashboard">Sign In ></button>
+                <button class="wrapper-send-form__button wrapper-send-form__button_login" type="submit" data-name="/dashboard">Sign In ></button>
             </div>
         </form>
         <div class="wrapper-link">

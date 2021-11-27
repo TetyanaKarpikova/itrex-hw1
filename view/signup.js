@@ -34,7 +34,7 @@ const SignUp = {
                 </button>
             </div>
             <div class="wrapper-send-form">
-                <button class="wrapper-send-form__button" type="submit" data-name="/signin">Sign Up ></button>
+                <button class="wrapper-send-form__button wrapper-send-form__button_register" type="submit" data-name="/signin">Sign Up ></button>
             </div>
         </form>
         <div class="wrapper-link">

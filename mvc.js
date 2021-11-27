@@ -8,18 +8,19 @@ class Model {
 
     findComponentByPth(path, routes) {
         return (
-            routes.find((item) => item.path.match(new RegExp(`^\\${path}$`, 'gm'))) ||
-            undefined
+            routes.find((item) => {               
+                return item.path.match(new RegExp(`^\\${path}$`, 'gm'))
+             })
         )
     }
 
     router = () => {
         const path = location.hash.slice(1).toLowerCase() || '/';
         const { view } = this.findComponentByPth(path, routes) || {};
-        
+       
         document.getElementById('root').innerHTML = view.render();
 
-        const main = document.querySelector('.main-wrapper');
+        const main = document.querySelector('.main-wrapper');     
         main?.addEventListener('click', handler(this.router, routes));
     }
 
@@ -40,6 +41,7 @@ class Controller {
             this.model.router(this.view.routes);
         })
         window.addEventListener('load', () => this.model.router(this.view.routes));
+
     }
 }
 
